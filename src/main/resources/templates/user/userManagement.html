@@ -45,7 +45,9 @@
                 <td>1</td>
                 <td>张三</td>
                 <td>13000000000</td>
-                <td class="td-manage"> <a title="编辑" href="javascript:;" onclick="" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> </td>
+                <td class="td-manage">
+                    <a title="编辑" href="javascript:;" th:onclick="|user_edit('编辑','user-edit.html','')|" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                </td>
             </tr>
             </tbody>
         </table>
@@ -77,6 +79,11 @@
         });
     });
 
+    /*用户-编辑*/
+    function user_edit(title,url,sno){
+        // layer_show('编辑','/student-edit?sno='+sno,430,500);
+        layer_show('编辑','/user-edit',430,500);
+    }
 
 </script>
 </body>

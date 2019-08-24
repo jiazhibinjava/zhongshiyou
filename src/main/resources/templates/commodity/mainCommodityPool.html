@@ -19,20 +19,20 @@
 <body>
 <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 商品管理 <span class="c-gray en">&gt;</span> 主商品池 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
-    <div class="text-c"> 搜索：<strong th:text="${userGroup}"> </strong>
+    <div class="text-c"> 搜索：<strong th:text="${type}"> </strong>
         <input type="text" class="input-text" style="width:250px" placeholder="商品名称" id="" name="">
         <input type="text" class="input-text" style="width:250px" placeholder="商品分类" id="" name="">
         <input type="text" class="input-text" style="width:250px" placeholder="商品SKU" id="" name="">
         <button type="submit" class="btn btn-success radius" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
     </div>
-    <div class="cl pd-5 bg-1 bk-gray mt-20"  th:if="${userGroup} eq 4"> <span class="l">
+    <div class="cl pd-5 bg-1 bk-gray mt-20"  th:if="${type} eq 4"> <span class="l">
         <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius">
             <i class="Hui-iconfont">&#xe6e2;</i> 上架
         </a>
         </span> <span class="r">共有数据：<strong>88</strong> 条</span>
     </div>
 
-    <div class="cl pd-5 bg-1 bk-gray mt-20"  th:if="${userGroup} eq 3 "> <span class="l">
+    <div class="cl pd-5 bg-1 bk-gray mt-20"  th:if="${type} eq 3 "> <span class="l">
         <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius" th:if="${userGroup} eq 3 ">
             <i class="Hui-iconfont">&#xe6e2;</i> 删除</a>
         <a href="javascript:;" onclick="" class="btn btn-primary radius" th:if="${userGroup} eq 3 ">

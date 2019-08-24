@@ -30,7 +30,7 @@ public class LoginController  {
             user.setPassword(password);
             user.setGroup(3);
             request.getSession().setAttribute("user", user);
-            webRequest.setAttribute("userGroup", 3, RequestAttributes.SCOPE_REQUEST);
+            webRequest.setAttribute("type", 3, RequestAttributes.SCOPE_REQUEST);
             map.put("result", 1);
         } else if(userName.equals("shiyou") && password.equals("1")){
             User user = new User();
@@ -39,7 +39,7 @@ public class LoginController  {
             user.setGroup(4);
             request.getSession().setAttribute("user", user);
 //            request.getSession().setAttribute("userGroup");
-            webRequest.setAttribute("userGroup", 4, RequestAttributes.SCOPE_REQUEST);
+            webRequest.setAttribute("type", 4, RequestAttributes.SCOPE_REQUEST);
             map.put("result", 1);
         } else if(userName.equals("group") && password.equals("1")){
             User user = new User();
@@ -47,7 +47,7 @@ public class LoginController  {
             user.setPassword(password);
             user.setGroup(2);
             request.getSession().setAttribute("user", user);
-            webRequest.setAttribute("userGroup", 2, RequestAttributes.SCOPE_REQUEST);
+            webRequest.setAttribute("type", 2, RequestAttributes.SCOPE_REQUEST);
             map.put("result", 1);
 
         } else if(userName.equals("admin") && password.equals("1")){
@@ -57,7 +57,7 @@ public class LoginController  {
             user.setGroup(1);
             request.getSession().setAttribute("user", user);
             map.put("result", 1);
-            webRequest.setAttribute("userGroup", 1, RequestAttributes.SCOPE_REQUEST);
+            webRequest.setAttribute("type", 1, RequestAttributes.SCOPE_REQUEST);
         }else {
             map.put("result", 0);
         }

@@ -3,6 +3,8 @@ package org.orks.zhongshiyou.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
+
 @Controller
 public class CommodityController {
 
@@ -21,6 +23,7 @@ public class CommodityController {
      */
     @RequestMapping("/preCommodityPool")
     public String preCommodityPool(){
+
         return "commodity/preCommodityPool";
     }
 
