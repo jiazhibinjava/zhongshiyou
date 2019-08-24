@@ -8054,7 +8054,7 @@
         }
     
         return Uploader.register({
-            name: 'log',
+            name: 'templates.system.log.log',
     
             init: function() {
                 var owner = this.owner,
